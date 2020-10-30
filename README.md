@@ -1,14 +1,21 @@
-# xkeysnail-emacs
-Configuration for xkeysnail wiht Emacs-like Keybinding.
+# xkeysnail Configuration
+Configuration for xkeysnail with Emacs-like Keybinding.
 
 ## Install xkeysnail for offical repository.
+### Arch Linux
+```
+yay -S xkeysnail
+```
+### From source
 ```bash
 git clone --depth 1 https://github.com/mooz/xkeysnail.git
+cd xkeysnail
+sudo pip3 install --upgrade .
 ```
 ## download this repository
 
 ```bash
-https://github.com/Eason0210/xkeysnail-emacs.git
+git clone https://github.com/Eason0210/xkeysnail.git
 ```
 
 ## Usage
