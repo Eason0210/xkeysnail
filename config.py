@@ -39,8 +39,17 @@ define_timeout(1)
 #     # Right shift when held down.
 #    Key.RIGHT_SHIFT: [Key.KPRIGHTPAREN, Key.RIGHT_SHIFT]
 # })
-# Keybindings for Firefox/Chromium
 
+# Keybindings for switch input method in Emacs
+define_conditional_multipurpose_modmap(lambda wm_class: wm_class in ("Emacs"), {
+   Key.LEFT_SHIFT: [Key.F19, Key.LEFT_SHIFT],
+})
+
+define_keymap(re.compile("Emacs"), {
+    K("F19"): K("C-Backslash"),
+}, "Emacs")
+
+# Keybindings for Konsole
 define_keymap(re.compile("konsole"), {
     # Type C-j to focus to the content
     K("C-y"): K("C-Shift-v"),
@@ -64,6 +73,7 @@ define_keymap(re.compile("Zeal"), {
     # Ctrl+s to focus search area
     K("C-s"): K("C-k"),
 }, "Zeal")
+
 
 # Emacs-like keybindings in non-Emacs applications
 define_keymap(lambda wm_class: wm_class not in ("Emacs", "konsole"), {
