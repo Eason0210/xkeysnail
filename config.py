@@ -51,11 +51,9 @@ define_keymap(re.compile("Emacs"), {
 
 # Keybindings for Konsole
 define_keymap(re.compile("konsole"), {
-    # Type C-j to focus to the content
     K("C-y"): K("C-Shift-v"),
     K("M-w"): K("C-Shift-c"),
 }, "konsole")
-
 
 # Keybindings for Firefox/Chromium
 define_keymap(re.compile("Firefox|Chromium"), {
@@ -76,7 +74,7 @@ define_keymap(re.compile("Zeal"), {
 
 
 # Emacs-like keybindings in non-Emacs applications
-define_keymap(lambda wm_class: wm_class not in ("Emacs", "konsole"), {
+define_keymap(lambda wm_class: wm_class not in ("Emacs", "konsole", "Alacritty"), {
     # Cursor
     K("C-b"): with_mark(K("left")),
     K("C-f"): with_mark(K("right")),
