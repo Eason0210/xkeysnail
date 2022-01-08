@@ -42,11 +42,11 @@ define_timeout(1)
 
 # Keybindings for switch input method in Emacs
 define_conditional_multipurpose_modmap(lambda wm_class: wm_class in ("Emacs"), {
-   Key.LEFT_SHIFT: [Key.F19, Key.LEFT_SHIFT],
+   Key.CAPSLOCK: [Key.F19, Key.LEFT_SHIFT],
 })
 
 define_keymap(re.compile("Emacs"), {
-    K("F19"): K("C-Backslash"),
+    K("F19"): K("C-F9"),
 }, "Emacs")
 
 # Keybindings for Konsole
